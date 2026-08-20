@@ -1,5 +1,3 @@
-import { projects } from '../data/projects'
-
 const stack = ['Laravel', 'Node.js', 'Python', 'React', 'React Native', 'TypeScript', 'MySQL', 'AWS', 'Claude API', 'Claude Code', 'Codex']
 
 export function Hero() {
@@ -12,12 +10,6 @@ export function Hero() {
       <div className="hero-actions"><a className="button primary" href="#projects">View Projects</a><a className="button secondary" href="#ai-system">AI Development System</a></div>
       <div className="profile-line"><b>노용호</b><span>Planning · Development · Deployment · Operation</span></div>
       <div className="hero-stack" aria-label="주요 기술">{stack.map(item => <span key={item}>{item}</span>)}</div>
-    </div>
-    <div className="hero-showcase" aria-label="주요 프로젝트 미리보기">
-      {[projects[0], projects[2], projects[5]].map((p, i) => <figure className={`hero-shot shot-${i + 1}`} key={p.id}>
-        <img src={`${import.meta.env.BASE_URL}${p.image}`} alt={p.imageAlt} /><figcaption><span>{p.number}</span>{p.title}</figcaption>
-      </figure>)}
-      <div className="hero-orbit"><span>PLAN</span><span>BUILD</span><span>VERIFY</span><span>SHIP</span></div>
     </div>
     <a className="scroll-cue" href="#about">SCROLL TO EXPLORE <i>↓</i></a>
   </section>

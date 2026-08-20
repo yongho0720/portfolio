@@ -149,3 +149,16 @@ section, footer { position: relative; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }.reveal { opacity: 1; transform: none; }
 }
+
+/* Screenshot-free portfolio layout */
+.hero { grid-template-columns: 1fr; gap: 0; }
+.hero-copy { max-width: 900px; }
+.project-detail,
+.project-detail.reverse { min-height: 0; display: block; }
+.project-copy { max-width: 760px; }
+.project-detail.reverse .project-copy { margin-left: auto; order: initial; }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .project-detail.reverse .project-copy { margin-left: 0; }
+}
