@@ -19,5 +19,5 @@ export default function App() {
     return () => observer.disconnect()
   }, [])
 
-  return <><Header /><main><Hero /><ProjectOverview /><AgentSystem /><DevelopmentWorkflow /><Projects /><LastMachineCaseStudy /><MoreProjects /></main><Footer /></>
+  return <><Header /><main><Hero /><ProjectOverview /><Projects /><LastMachineCaseStudy /><MoreProjects /><AgentSystem /><DevelopmentWorkflow /></main><Footer /></>
 }
