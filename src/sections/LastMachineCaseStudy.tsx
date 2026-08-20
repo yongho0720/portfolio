@@ -1,14 +1,14 @@
 import { SectionTitle } from '../components/SectionTitle'
 
-const checks = ['API specification match', '401 handling', 'N+1 prevention', 'collision detection', 'TypeScript compile', 'game state validation']
+const checks = ['API 명세 일치', '401 처리', 'N+1 방지', '충돌 판정', 'TypeScript 컴파일 통과']
 const enemies = [
-  ['Basic', '40% tracking / 60% random'], ['Scout', 'Dash / ×2 speed'], ['Armored', 'Rage fire at critical HP'],
-  ['Sniper', 'Re-aim before shot'], ['Heavy', '3-way spread shot'], ['Speeder', 'Close-range rapid fire'],
+  ['Basic', '40% 추적 / 60% 랜덤'], ['Scout', '대시 · 속도 2배'], ['Armored', 'HP 1 분노 연사'],
+  ['Sniper', '발사 직전 재조준'], ['Heavy', '3방향 산탄'], ['Speeder', '근접 급사'],
 ]
 
 export function LastMachineCaseStudy() {
   return <section className="section case-study">
-    <SectionTitle eyebrow="06 / CASE STUDY" title="LAST MACHINE × AI Agents" copy="기획부터 검증과 재수정까지, 사람이 정한 방향을 에이전트가 실행하는 자가 검증 루프" />
+    <SectionTitle eyebrow="09 / CASE STUDY" title="라스트머신에 적용한 AI 에이전트 개발 구조" copy="CLAUDE.md가 오케스트레이터 정책을 정의하고, 기능 요청은 planner → designer → developer → verifier 순으로 흐릅니다. verifier가 FAIL을 보고하면 developer로 재위임하여 사람 개입 없이 결함을 교정합니다." />
     <div className="case-flow reveal">
       {['REQUEST', 'PLANNER', 'DESIGNER', 'DEVELOPER', 'VERIFIER'].map((x, i) => <div key={x}><span>0{i + 1}</span><strong>{x}</strong>{i < 4 && <i>→</i>}</div>)}
       <aside><b>FAIL</b><span>Bug specification → Developer → Rebuild → Verifier</span></aside>

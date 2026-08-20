@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const links = [['projects', 'PROJECTS'], ['ai-system', 'AI SYSTEM'], ['workflow', 'WORKFLOW'], ['stack', 'STACK'], ['contact', 'CONTACT']]
+const links = [['projects', 'PROJECTS'], ['ai-system', 'AI SYSTEM'], ['workflow', 'WORKFLOW'], ['last-machine-app', 'LAST MACHINE'], ['contact', 'BUILT BY']]
 
 export function Header() {
   const [open, setOpen] = useState(false)

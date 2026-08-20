@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { Header } from './components/Header'
-import { About } from './sections/About'
 import { AgentSystem } from './sections/AgentSystem'
 import { DevelopmentWorkflow } from './sections/DevelopmentWorkflow'
 import { Footer } from './sections/Footer'
@@ -9,7 +8,6 @@ import { LastMachineCaseStudy } from './sections/LastMachineCaseStudy'
 import { MoreProjects } from './sections/MoreProjects'
 import { ProjectOverview } from './sections/ProjectOverview'
 import { Projects } from './sections/Projects'
-import { TechStack } from './sections/TechStack'
 
 export default function App() {
   useEffect(() => {
@@ -21,5 +19,5 @@ export default function App() {
     return () => observer.disconnect()
   }, [])
 
-  return <><Header /><main><Hero /><About /><ProjectOverview /><AgentSystem /><DevelopmentWorkflow /><Projects /><LastMachineCaseStudy /><MoreProjects /><TechStack /></main><Footer /></>
+  return <><Header /><main><Hero /><ProjectOverview /><AgentSystem /><DevelopmentWorkflow /><Projects /><LastMachineCaseStudy /><MoreProjects /></main><Footer /></>
 }
