@@ -12,6 +12,7 @@ export interface Project {
   url?: string
   image: string
   imageAlt: string
+  images?: string[]
 }
 
 export const projects: Project[] = [
@@ -56,5 +57,25 @@ export const projects: Project[] = [
     description: '2025년 경상북도 의성 산불에서 영감을 받아 만든 게임입니다. 건조한 기후, 산악 환경, 강풍, 비화 등의 악조건을 게임 시스템에 녹여 일반 디펜스 게임과 차별화했습니다.',
     stack: ['React Native', 'Expo', 'React Native Skia', 'Canvas', 'react-i18next', 'Laravel', 'PHP 8.3'], roles: ['게임기획', '시나리오 설계', '게임 개발', '마케팅', '배포'],
     image: 'assets/projects/wildfire-force.png', imageAlt: '산불특공대 전투와 스테이지 선택 화면',
+  },
+  {
+    id: 'travelgo', number: '07', title: '트래블고', category: 'TRAVEL', status: '운영중',
+    headline: '자연어로 여행 정보를 입력하면 AI가 일정을 설계해주는 여행 플래너',
+    description: '목적지, 날짜, 인원, 동행 유형을 자연어로 입력하면 AI가 파싱해 상세 여행 일정을 생성합니다. 일정 편집·공유, 공개 여행 탐색 기능을 갖추고 있으며, 지도와 연동해 동선을 시각화합니다.',
+    stack: ['Laravel', 'React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind CSS', 'AWS Lightsail', 'Claude API'],
+    roles: ['기획', '개발', '배포'],
+    url: 'https://travelgo.vibeholic.app',
+    image: 'assets/projects/travelgo/1.png', imageAlt: '트래블고 여행 일정 입력과 플랜 편집 화면',
+    images: Array.from({ length: 6 }, (_, i) => `assets/projects/travelgo/${i + 1}.png`),
+  },
+  {
+    id: 'sajuchaebi', number: '08', title: '오늘의 채비', category: 'LIFESTYLE', status: '운영중',
+    headline: '사주를 기반으로 오늘의 운세와 음식·음악을 추천하는 라이프스타일 서비스',
+    description: '생년월일시를 입력하면 사주팔자를 분석해 일간·월간 운세, 오행 기반 음식 추천, 오늘의 음악을 제공합니다. Claude API로 운세 텍스트를 생성하고 토스페이먼츠로 멤버십 결제를 지원합니다.',
+    stack: ['Laravel', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'PHP 8.3', 'Claude API', 'TossPayments'],
+    roles: ['기획', '개발', '배포'],
+    url: 'https://sajuchaebi.com',
+    image: 'assets/projects/sajuchaebi/1.png', imageAlt: '오늘의 채비 사주 입력과 일간 운세 화면',
+    images: Array.from({ length: 6 }, (_, i) => `assets/projects/sajuchaebi/${i + 1}.png`),
   },
 ]
