@@ -10,6 +10,7 @@ export interface Project {
   stack: string[]
   roles: string[]
   url?: string
+  appStoreUrl?: string
   image: string
   imageAlt: string
   images?: string[]
@@ -25,13 +26,15 @@ export const projects: Project[] = [
     url: 'https://sajuchaebi.com',
     image: 'assets/projects/sajuchaebi/1.png', imageAlt: '사주채비 사주 입력과 일간 운세 화면',
     images: Array.from({ length: 6 }, (_, i) => `assets/projects/sajuchaebi/${i + 1}.png`),
-  },  {
+  },
+  {
     id: 'travelgo', number: '02', title: '여행고', category: 'TRAVEL', status: '운영중',
     headline: '자연어로 여행 정보를 입력하면 AI가 일정을 설계해주는 여행 플래너',
     description: '목적지, 날짜, 인원, 동행 유형을 자연어로 입력하면 AI가 파싱해 상세 여행 일정을 생성합니다. 일정 편집·공유, 공개 여행 탐색 기능을 갖추고 있으며, 지도와 연동해 동선을 시각화합니다.',
     stack: ['Laravel', 'React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind CSS', 'AWS Lightsail', 'Claude API'],
     roles: ['기획', '개발', '배포'],
     url: 'https://travelgo.vibeholic.app',
+    appStoreUrl: 'https://apps.apple.com/kr/app/%EC%97%AC%ED%96%89%EA%B3%A0/id6809114486',
     image: 'assets/projects/travelgo/1.png', imageAlt: '여행고 여행 일정 입력과 플랜 편집 화면',
     images: Array.from({ length: 6 }, (_, i) => `assets/projects/travelgo/${i + 1}.png`),
   },

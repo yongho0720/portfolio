@@ -201,6 +201,7 @@ section, footer { position: relative; }
 }
 
 /* Swipeable project screenshots */
+.project-links { display: flex; flex-wrap: wrap; column-gap: 24px; }
 .project-detail > .project-gallery { min-width: 0; }
 .gallery-stage { position: relative; overflow: hidden; border: 1px solid #d9e1eb; border-radius: 20px; background: #e9eef5; }
 .gallery-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; border-radius: inherit; }
