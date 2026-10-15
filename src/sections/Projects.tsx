@@ -3,9 +3,9 @@ import { projects } from '../data/projects'
 
 export function Projects() {
   return <section className="section selected-projects">
-    <div className="project-list"><ProjectSection project={projects[0]} /></div>
+    <div className="project-list">{projects.slice(0, 3).map((p, i) => <ProjectSection project={p} reverse={i % 2 === 1} key={p.id} />)}</div>
     <VibeFlow />
-    <div className="project-list continuing">{projects.slice(1, 3).map((p, i) => <ProjectSection project={p} reverse={i % 2 === 0} key={p.id} />)}</div>
+    <div className="project-list continuing">{projects.slice(3, 5).map((p, i) => <ProjectSection project={p} reverse={i % 2 === 0} key={p.id} />)}</div>
   </section>
 }
 
